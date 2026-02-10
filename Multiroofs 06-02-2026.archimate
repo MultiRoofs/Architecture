@@ -1,0 +1,1008 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="MultiRoofs architecture" id="id-72d8ec91b9d54acdaad4463e9129a7b8" version="5.0.0">
+  <folder name="Strategy" id="id-5a38ad414ed74844bf1df532de76bf74" type="strategy">
+    <element xsi:type="archimate:Capability" name="3D City Visualisation" id="id-2ffb78f8ecd14e36a5939d87c0809d3b"/>
+    <element xsi:type="archimate:Capability" name="Rooftop Potential Analysis" id="id-3c6b598611b34d4b89c2ec9a1446eb70"/>
+    <element xsi:type="archimate:Capability" name="Scenario Modelling" id="id-c085160b51624599bdefdf5fa3045a0c"/>
+    <element xsi:type="archimate:Capability" name="Policy Objective Allocation" id="id-310e223c200f4d3ab6d3bd0b0c7d6e0e"/>
+    <element xsi:type="archimate:Capability" name="Data Standardisation and Validation" id="id-1785ffcc6f134883af7b5f4a750caaa4"/>
+    <element xsi:type="archimate:Capability" name="Data Publication and Export" id="id-fc25d11d888c4de99f4bb2dd720266fd"/>
+    <element xsi:type="archimate:Capability" name="Per-LA Configuration" id="id-3b8a87b2d2bd47ecb22dcd7ca062d69d"/>
+    <element xsi:type="archimate:CourseOfAction" name="MVP to Working Product delivery path" id="id-8dd48d056b854bb5952620c169eb62a1">
+      <documentation>Iterative development: MVP -> Working Product.</documentation>
+    </element>
+    <element xsi:type="archimate:CourseOfAction" name="Reuse Roofscape concepts, rebuild stack" id="id-4b4f996333a44d57895ad9b1ef4cdd71">
+      <documentation>Reuse Roofscape assets for demos/ideas; reimplement production web stack.</documentation>
+    </element>
+    <element xsi:type="archimate:CourseOfAction" name="Standardised reference solution with per-LA configuration" id="id-1043053a4cb14ef1a0c8efe26c48f952">
+      <documentation>Common standards with local configuration of rules, datasets, presentation.</documentation>
+    </element>
+    <element xsi:type="archimate:CourseOfAction" name="Governed technical decision process" id="id-f89a2187e950440abafa6b886d56955f">
+      <documentation>WG leads propose; Technical Expert validates; Consortium ratifies.</documentation>
+    </element>
+  </folder>
+  <folder name="Business" id="id-5a96e673ad0142e3aa4ece43fc339955" type="business">
+    <element xsi:type="archimate:BusinessActor" name="Urban Planner (Municipality)" id="id-3b39eb1e83ab47c7a1bb59b11d28f50b"/>
+    <element xsi:type="archimate:BusinessActor" name="Policymaker (Municipality)" id="id-6e68855fbd0d42c49e0c7e381e0d1ac0"/>
+    <element xsi:type="archimate:BusinessActor" name="Program Manager (Municipality)" id="id-663a4f91e6974131b546466e0428cac6"/>
+    <element xsi:type="archimate:BusinessActor" name="Building Owner (Housing Corporation)" id="id-12bd2801cb1047ad9000ab0c8e533abf"/>
+    <element xsi:type="archimate:BusinessActor" name="Local Authority Expert" id="id-24b13f7b01e44e6980d89e7dda262c91"/>
+    <element xsi:type="archimate:BusinessActor" name="Consortium Meeting" id="id-1f41926d02db4ad9850f1914fb26bd9f"/>
+    <element xsi:type="archimate:BusinessRole" name="Tool User" id="id-dc37ea2af4f947ee914ca3ee8cf07273"/>
+    <element xsi:type="archimate:BusinessRole" name="Scenario Designer" id="id-1bf6211c29eb47ee9dc749effbaf9180"/>
+    <element xsi:type="archimate:BusinessRole" name="Policy Analyst" id="id-cbe871396a6e4767a271575e3ef99f4b"/>
+    <element xsi:type="archimate:BusinessRole" name="Technical Decision Maker" id="id-ccec358c48e643dd9dd9638569cea80b"/>
+    <element xsi:type="archimate:BusinessProcess" id="id-ef3270d816b24fe7ae9aa8954cf5ac2f"/>
+    <element xsi:type="archimate:BusinessProcess" name="Inspect roofs and metrics" id="id-eeaab8e87f654ec197b11d6147777837"/>
+    <element xsi:type="archimate:BusinessProcess" name="Configure model parameters" id="id-0639181d2a864733b0ca2182138b15c6"/>
+    <element xsi:type="archimate:BusinessProcess" name="Create scenarios" id="id-fc6d28b109b74b288fa0ff5cda4d0cad"/>
+    <element xsi:type="archimate:BusinessProcess" name="View &amp; Compare scenarios" id="id-4188cf0e07f34246a2cfac0e29a3e1b0"/>
+    <element xsi:type="archimate:BusinessProcess" name="Export results" id="id-0dd3982599044021a6baef6fd694257b"/>
+    <element xsi:type="archimate:BusinessProcess" name="Facilitate stakeholder workshop" id="id-e1cd6a1dea8f43228e42b73c0e95e219"/>
+    <element xsi:type="archimate:BusinessService" name="Rooftop Classification &amp; Scenario preparation Service" id="id-d37e581a679d449d84f0ea0771fd3570"/>
+    <element xsi:type="archimate:BusinessService" name="Scenario Analysis Service" id="id-8d36a5b5a1754a9ba8030dcdcb111624"/>
+    <element xsi:type="archimate:BusinessService" name="Export and Reporting Service" id="id-bb795642346b4a8db4dab58c442ef61f"/>
+    <element xsi:type="archimate:BusinessProcess" name="Prepare scenarios" id="id-a163cfd1899c4616a54fde1fcca8b27d">
+      <documentation>Note: attributes of a building are limitied to LOD2.2 characteristics + calculated roof options. (derived from must-haves: 3d Web Viewer)</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" name="Manage 3D views" id="id-3f6d5687c4174c5fa3b18b120b97cbdb"/>
+    <element xsi:type="archimate:BusinessProcess" name="Share scenario" id="id-1aaa9b3356ab487f87b92242d200360a">
+      <documentation>By means of export, link, print, csv, pdf</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" name="Save scenario" id="id-db6046e7eb674469b4d214b619ef6fde">
+      <documentation>By means of export, link, print, csv, pdf</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" name="Share scenario (copy)" id="id-fe56494c550a4a6bb6a32523c1104fa5">
+      <documentation>By means of export, link, print, csv, pdf</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessActor" name="Local Authority Expert" id="id-1916066fb45541e4b2eb4ccd3cfa9eaf"/>
+  </folder>
+  <folder name="Application" id="id-8fa7db8d973841bf879a00d928b0fd12" type="application">
+    <folder name="Data" id="id-d2d24d6a272542799230e2222ba68286">
+      <element xsi:type="archimate:DataObject" name="CityJSON Dataset - enriched with attributes (values calculated and/or custom)" id="id-f4397ef6bd79438abf4137af1b2206d4"/>
+      <element xsi:type="archimate:DataObject" name="Rooftop Metrics" id="id-863e111057ce4cbf982494fb9f6d982f"/>
+      <element xsi:type="archimate:DataObject" name="Scenario Results Dataset" id="id-7f1f15a6b7a549bcaf16fa91a5db17b0"/>
+      <element xsi:type="archimate:DataObject" id="id-10467fe8d2814b5995731c5afef946de"/>
+    </folder>
+    <element xsi:type="archimate:ApplicationComponent" name="3D Web Viewer" id="id-cdfe1b18223844c89926bb15f47ace56">
+      <documentation>Must-haves:
+- View the relevant area in 3D
+- Zoom in from city to building level and vice versa
+- Pan and orbit the scene
+- Save and recall a bookmarked view
+
+- Show characteristics / attributes of a particular roof (per roof attributes)
+
+(line 6):
+
+* Show calculated rooftop potential (color-coded rooftops, including 'golden combinations'). 
+   Two or more combinations are shown 
+   Every building can have a singular roof option or multiple options. Multiple options are called 'golden combinations'. 
+   --> No UX design yet for showing multiple options for a roof
+
+* Show underlying parameters (these are shown in the scenario panel).
+   Scenario panel: weight with the rooftop coloring  is part of preparing a scenario. Analysis is on non-dynamic data. It's preconfigured. These parameters can be shown. 
+   The objective is to show what parameters were used in the preperation of the scenario. One cannot change these parameters in the analysis.
+   
+   Example: show a zone, and then you like select that 50% should be green and 50% solar? Assumption: analysis is done on static prepared scenario's. 
+   This option is in 'Prepare scenario'. 
+
+   Example: setting a certain target: 
+
+Practical: the 3Dtiles contain building attributes that are shown when clicked on a building.
+
+Nice-to-haves:
+- Show attributes (like flooding) in the map: show those buildings that  do have a flood risk:
+Two functionalities: 
+* abilty to add / show / hide layers - Implemented by selecting a Geo layer that's shown in the 3D view. 
+* highlight buildings based on attributes
+</documentation>
+      <property key="Coloring schema" value="Decided outside of the viewer. The viewer adopts the choosen colors based on the attributes of the roof"/>
+      <property/>
+    </element>
+    <element xsi:type="archimate:ApplicationComponent" name="Calculation Engine" id="id-b6e51244fbdc4cc485291ac765c22fa0"/>
+    <element xsi:type="archimate:ApplicationComponent" name="Scenario Engine" id="id-e9260a46ab3b4973bed6419036d918ea"/>
+    <element xsi:type="archimate:ApplicationComponent" name="Rules and Configuration Module" id="id-556488bbb5084c8abc3b430d5dbd38f2"/>
+    <element xsi:type="archimate:ApplicationComponent" name="Export Module" id="id-bb5db2657fe146228390b9b46e067031"/>
+    <element xsi:type="archimate:ApplicationComponent" name="Metadata Module" id="id-ca2121a82d76479fa449c3d9c4edb193"/>
+    <element xsi:type="archimate:ApplicationComponent" name="ETL Pipeline" id="id-7d8c0b7db59241bd8efd4c45cdf6f582"/>
+    <element xsi:type="archimate:ApplicationService" name="3D Visualisation Service (DCU)" id="id-a69665c4906c415aa4bda8f03f57612d">
+      <documentation>[ 3D brondata ]
+(BAG, BGT, LiDAR)
+        │
+        ▼
+[ 3D Tiles ]
+(standaard / streaming)
+        │
+        ▼
+[ Geo-engine ]
+(Cesium)
+        │
+        ▼
+[ 3D toepassingen ]
+(Unreal / Unity / Web)</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Rooftop Calculation Service" id="id-d0e221f9a1914ead80d02f3ba82ae67f">
+      <property key="TECHNOLOGY PREFERENCE" value="CesiumJS"/>
+      <property key="Re-use alternative" value="3d Rotterdam - 3Dtiles/Cesium/Amazon"/>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Scenario Computation Service" id="id-f45057f6ccba4a50adf667f0a4482c07"/>
+    <element xsi:type="archimate:ApplicationService" name="Configuration Service" id="id-f1775408653644bdbd6d22a73ceeb73f"/>
+    <element xsi:type="archimate:ApplicationService" name="Export Service" id="id-67aac19b8599447e84ec774fee4e93a4"/>
+    <element xsi:type="archimate:ApplicationService" id="id-c558e4fefd1041c991a5d9258980a3f0"/>
+    <element xsi:type="archimate:ApplicationInterface" name="Web UI for Analysis (DCU)" id="id-f9dabba9589b49019a5258e9ffd56358"/>
+    <element xsi:type="archimate:ApplicationInterface" name="(Future) OGC API Interface" id="id-aee1c4bdf7e3490f944fb897b6306b17"/>
+    <element xsi:type="archimate:ApplicationFunction" name="Select Parameter value" id="id-e992e4fa9f384e90b94e00090b592781"/>
+    <element xsi:type="archimate:ApplicationFunction" name="Must-haves" id="id-75b2570013b64672a77a55ce825f17c3">
+      <documentation>&quot;During an interactive session with end-users, the end-user should be able to:
+* Toggle scenario panel on/off;
+* Adjust model weights to reflect priorities and constraints for zones/ functions;
+* Change feasibility thresholds for selected functions;
+* Draw activation zones on the map;
+* Save the calculated scenario and input parameters;
+* Set simple policy parameters (e.g., minimal m2 of green roof).&quot;</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationFunction" name="Nice-to-haves" id="id-c9fbd92ecb02423f8ef3ff2d85419138">
+      <documentation>&quot;* More complex client-side scenario modelling (heavier impact on backend);
+* Option to share scenario.&quot;</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationInterface" name="Web UI for configuration" id="id-a765c88a06324964b98c3887ee72519c"/>
+    <element xsi:type="archimate:ApplicationInterface" name="Web UI (copy)" id="id-fa420ac14556498889c14475019a3ea8"/>
+    <element xsi:type="archimate:DataObject" name="3D Viewpoint configuration" id="id-c0c88ed6a1624239a70f045a799467cf"/>
+    <element xsi:type="archimate:ApplicationComponent" name="Open / Save viewpoint" id="id-8fa4360278fa480c973a4e7f5efc91a1">
+      <documentation>users want to save the image with the angle and visualisation settings in order to:
+- start from where they left in the analysis
+- compare scenario's looking with the same zoom, angles, colors. 
+</documentation>
+    </element>
+    <element xsi:type="archimate:DataObject" name="3DTiles (containing the attributes)" id="id-dd6bf5c0f154400997b7c94d2febfdda">
+      <documentation>@@How to recognize scenarios in the data?</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationComponent" name="Generate 3D tiles " id="id-331f2ff8543d43c18664e30cfca43b55">
+      <documentation>@@Will TU Delft do the translation?
+
+@@Is it a a correct assumption that the 3Dtiles are sets with reference to a particular scenario? 
+
+[ 3D brondata ]
+(BAG, BGT, LiDAR)
+        │
+        ▼ (TU delievers an open source tool to generate this - Roofer
+
+[ CityJSON (LOD2.2) ]
+(gestandaardiseerd stadsmodel)
+        │
+        ▼ ? TU Delft
+[CityJSON (LOD2.2) - enriched by the calculation models]
+          │
+        ▼ ? Cesium ION - one of the options, what are others. Open source
+  
+[ 3D Tiles ]
+(streaming / performance)
+        │
+        ▼
+[ Geo-engine ]
+(CesiumJS) 
+        │
+        ▼
+[ 3D toepassingen ]
+(Unreal / Unity / Web)</documentation>
+      <property key="Potential technology solution" value="Cesium Ion: proprietary -> Data in US cloud : https://cesium.com/platform/cesium-ion/"/>
+      <property key="Potential technology solution" value="Rotterdam 3D: proprietary - CityGML -> VCS: https://www.rotterdam.nl/rotterdam-in-3d"/>
+      <property key="Potential technology solution" value="Use open source solution: https://chatgpt.com/share/6984b69d-87f0-8005-9c83-2782e5ce7053"/>
+      <property key="Choosen technology solution" value="Rotterdam: Andre Mulder: https://github.com/3DGI/tyler"/>
+    </element>
+    <element xsi:type="archimate:DataObject" name="Source data BAG, BGT, Lidar" id="id-0a9d4422b1864c139cde31c460bffd04">
+      <documentation>Requirements for the data are written down in the 1.1 deliverable.
+https://rotterdam.sharepoint.com/:f:/s/Multiroofs/IgAjo3RMJPtgSIecJjXbsKfAAfcHBugeD3N329wvREbFgFY?e=bCQunV
+</documentation>
+      <property key="Documentation" value="https://rotterdam.sharepoint.com/:f:/s/Multiroofs/IgAjo3RMJPtgSIecJjXbsKfAAfcHBugeD3N329wvREbFgFY?e=bCQunV"/>
+    </element>
+    <element xsi:type="archimate:DataObject" name="CityJSON Dataset (LOD2.2) (copy)" id="id-8e1bbd1fa99b4ed694e24a2c1bfb84f1"/>
+    <element xsi:type="archimate:ApplicationService" name="Prepare 3d data (TU Delft)" id="id-f95d7d02658442fd99c1bbbab85388da">
+      <documentation>
+&quot;In preparation of an interactive session with end-users, the technical expert should be able to:
+* Configure the scenario engine => Apply calculation models; 
+* Prepare supporting data => Source data 
+* Prepare several scenarios => @@How is this implemented? Is it a scenario ID with a couple of 3DTiles? Component is missing
+* Save scenarios for reuse.&quot;
+
+
+[ 3D brondata ]
+(BAG, BGT, LiDAR)
+        │
+        ▼ (TU delievers an open source tool to generate this - Roofer
+
+[ CityJSON (LOD2.2) ]
+(gestandaardiseerd stadsmodel)
+        │
+        ▼ ? TU Delft
+[CityJSON (LOD2.2) - enriched by the calculation models]
+          │
+        ▼ ? Cesium ION - one of the options, what are others. Open source
+  
+[ 3D Tiles ]
+(streaming / performance)
+        │
+        ▼
+[ Geo-engine ]
+(CesiumJS) 
+        │
+        ▼
+[ 3D toepassingen ]
+(Unreal / Unity / Web)</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationComponent" name="Generate CityJson" id="id-825b7583bbab4742b7af273e2325dd60">
+      <property key="Potential technology solution" value="TU Delft tool - Roofer"/>
+      <property key="Potential technology solution"/>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Simple authorization &amp;" id="id-7f441c3df67648fbb73267a8b76552ca">
+      <documentation>Perhaps a simple solution, not a complex IAM stack. Can be used a table with user-names and roles with rights - as simple as that.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Save/Open Named Viewpoint" id="id-869d31c9a8734de98e75e783e3dd7322"/>
+    <element xsi:type="archimate:ApplicationComponent" name="Identity Access Management " id="id-8c61e4a41145412d988546db7c74a52c"/>
+    <element xsi:type="archimate:ApplicationFunction" name="Open / Save viewpoint" id="id-a387116121454f55adb75f387ee5b1d2">
+      <documentation>A viewpoint consists of a visual representation of a presented scenario with the viewing settings and the values of the parameters.
+
+Such that when reopening the 3D web viewer a user can select a viewpoint and start with where he/she left off with the same view. 
+Visual: zoom level, angle, perspective. choosen scenario with the parameters / filters. This also makes it easier to compare scenarios as your look with the same parameters and perspective.
+So one should be able to apply a viewpoint to a choosen scenario. And optionally save this viewpoint as a preference for viewing a scenario. 
+</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationFunction" name="Hide/blurr buildings" id="id-935fd031f9194f07a63effa1d71590d6">
+      <documentation>Governmental regulations and/or rights may apply for hiding/blurring buildings.
+This is not a decision of the program itself but should be taken into account by program management leading to guidelines/constraints for the implementation of the application components</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationFunction" name="Explore scenarios + Filtering" id="id-ec7d1e85f87b4410ac1606d4df223b6d">
+      <documentation>See summary dataset per city/area - * Show (aggregated) information (e.g. # roofs) and potential (e.g. #m2 potential for yellow roofs) 
+=> you can select an area/zone and ask to show the totals of the roofs in that  area and sum of m2 (eg)
+=> One can request a summary  on the current selection. A pop-window opens showing number of roofs and subtotal of m2 per rooftype + total m2
+
+Click a roof to view its details => pop-up window opens with showing the details. Not a hoovering. 
+
+See area (m²), slope (°), elevation (m) => @@Max will update catalog - part of first line here
+
+Current use of rooftop is not a must-have => @@If the data is available it's a must have. This also has effect to the preperation as one can add custom attributes (in diagram already). 
+=> If available than also ability to filter on it. 
+
+&quot;Filter relevant roofs&quot;
+* Potential (e.g. more than >x m2 of green roof); => filter on value and range (lower, between, higher)
+* Owner type (e.g., private, housing corp, public); => filter on selected dropdown list one, all or selected
+* Feasibility threshold => show by MRDV - indicator of certainty that you can realize a roof with a certain color. eg: 100% most likely does not show any roof, 10% shows more. 
+=> Feasability score is calculated in the preperation and stored in thje 3Dtiles @@check with MRDV?
+* Other attributes. => @@text search  - is nice-to-have?
+@@Category selection - eg type of building -  is  nice-to-have?
+
+&quot;During an interactive session with end-users, the end-user should be able to:
+* Toggle scenario panel on/off => Select a scenario from the 3Dtiles
+* Adjust model weights to reflect priorities and constraints for zones/ functions => Attributes filtering - as already described;
+* Change feasibility thresholds for selected functions => type of rooftop
+* Draw activation zones on the map => @@what is an activation zone?
+* Set simple policy targets (e.g., minimal m2 of green roof) => Attribute filtering. 
+* Save the calculated scenario and input parameters. => Open/Save Viewpoint functionality
+
+@@One cannot add geo layers (like WMS, WMTS) layers as we are not creating a GIS tool.
+
+@@One can only see one scenario at the same time in a browser tab, so no split screen. However it's possible to open a new tab in your browser and work on another scenario.
+
+Rank opportunities: View top‑ranked areas/roofs/buildings per function => Attribute filtering based on properties (attribute:values)
+
+Summarise results: View city/area/building‑level summary (m² by use, kWh, m³ retention, counts) => See first line.
+
+View a concise methodology page => Click on a Info option in the browser, opens a HTML page with text explaining the meth
+View a quick‑start guide => The info option contains a link to the meth and also a link to a quick start HTML page.
+
+</documentation>
+      <property key="Potential technology solution" value="CesiumJS"/>
+    </element>
+    <element xsi:type="archimate:DataObject" name="Saved viewpoints" id="id-bf889db792c74dd2b0e8bfcd472b2232"/>
+    <element xsi:type="archimate:DataObject" name="Users, roles &amp; rights administration" id="id-d8bebed44a774f228fa28cba6f390095"/>
+    <element xsi:type="archimate:ApplicationFunction" name="Export analysis result" id="id-870eefc232f54fe29607e5914092030d">
+      <documentation>Export data in CSV	&quot;
+* Export calculation engine input data (CSV); => the totals after selecting a zone and summarize should be exportable to CSV
+* Export selected roofs and building output dataset (CSV) => Just a table of buildings, roofs and properties (attribute:value). 
+
+PDF is nice to have
+
+</documentation>
+    </element>
+    <element xsi:type="archimate:DataObject" name="CSV, (PDF)" id="id-09d196df585645b2bd6fba29c9d421b6"/>
+    <element xsi:type="archimate:ApplicationComponent" name="Apply rules/logic" id="id-83ef7ed10a0146abb2737b7606d65734">
+      <documentation>Must-have:
+- one can execute rules based on selecting parameters that are applierd to the static building attributes. 
+This leads to new calculations on the building that can be shown in the 3d Viewer as a calcuated attribuite during analysis</documentation>
+      <property key="Potential technology solution" value="Cesium Ion"/>
+      <property key="Potential technology solution" value="Rotterdam 3D"/>
+    </element>
+    <element xsi:type="archimate:DataObject" name="Derived attributes from applying rules" id="id-3d91ac63e089427f9b042f7d5b8fffd3"/>
+    <element xsi:type="archimate:DataObject" name="CityJSON Dataset (LOD2.2) - base" id="id-e4158d3cc3314c0bb7e6a00c3d86d27a"/>
+    <element xsi:type="archimate:ApplicationComponent" name="Apply calculation models" id="id-5e338a5b48b444a0b150c3127847f2bf">
+      <documentation>[ 3D brondata ]
+(BAG, BGT, LiDAR)
+        │
+        ▼ (TU delievers an open source tool to generate this - Roofer
+
+[ CityJSON (LOD2.2) ]
+(gestandaardiseerd stadsmodel)
+        │
+        ▼ ? TU Delft
+[CityJSON (LOD2.2) - enriched by the calculation models]
+          │
+        ▼ ? Cesium ION - one of the options, what are others. Open source
+  
+[ 3D Tiles ]
+(streaming / performance)
+        │
+        ▼
+[ Geo-engine ]
+(CesiumJS) 
+        │
+        ▼
+[ 3D toepassingen ]
+(Unreal / Unity / Web)</documentation>
+      <property key="Potential technology solution" value="Cesium Ion"/>
+      <property key="Potential technology solution" value="Rotterdam 3D"/>
+    </element>
+    <element xsi:type="archimate:ApplicationFunction" name="Attribute filtering" id="id-0980aad087544406a4562b8d360dd1cf">
+      <documentation>Think about 
+- Thresholds for attributes => @@What is the desired behaviour?
+
+@@Writeback to 3Dtiles is not supported. Any change to 3Dtiles can be done/requested in the preperaton service.</documentation>
+      <property key="Potential technology solution" value="CesiumJS"/>
+    </element>
+    <element xsi:type="archimate:ApplicationInterface" name="Python / Jupyter notebook?  terminal?" id="id-a722837f85ea4c35a0e7aaa8e77579be"/>
+    <element xsi:type="archimate:ApplicationComponent" name="Add Custom properties" id="id-858d835e73b4498eb7c5895687a442d2">
+      <documentation>Arthur mentioned the ability to add you own values to attributes. This may be needed if the source data does not have the information. Eg: whether a roof allready has solar panels. 
+The idea is that the LA delivers the data with id, attribute,value that is combined in the CityJSON dataset. 
+
+@@Where is the data stored that serves as input for this component? 
+
+Allow the user to make manual adjustments to the data (e.g. changing the status of a building from 'high potential for solar panels' to 'already used for solar panels').
+>>> perhaps this should be part of the pre-processing.&quot; => part of 'Apply custom attributes'
+
+@@Assumptation is that a LA can deliver a file describing the areas/building/roofs that should be blurred and/or hidden</documentation>
+      <property key="Potential technology solution" value="Cesium Ion"/>
+      <property key="Potential technology solution" value="Rotterdam 3D"/>
+    </element>
+    <element xsi:type="archimate:DataObject" name="Custom attribute values" id="id-70293672d2e34408a1ea62ff7043c1cc">
+      <documentation>@@Where do we store the custom attributes/values? and what is the format?</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationComponent" name="Create Scenarios" id="id-0627d0507fc64a7b8404991b3a75db9b">
+      <documentation>@@Check with Hugo whether we </documentation>
+      <property key="Potential technology solution" value="Cesium Ion: proprietary -> Data in US cloud"/>
+      <property key="Potential technology solution" value="Rotterdam 3D: proprietary - CityGML -> VCS"/>
+      <property key="Potential technology solution" value="Use open source solution: https://chatgpt.com/share/6984b69d-87f0-8005-9c83-2782e5ce7053"/>
+    </element>
+  </folder>
+  <folder name="Technology &amp; Physical" id="id-18f6a52e60fc4b569ecd611fbdbb34b3" type="technology">
+    <folder name="Technology" id="id-5e5fbc5fbb484131848207aff593e54d">
+      <element xsi:type="archimate:Node" name="Central Cloud Platform" id="id-847a59852cdd41368ed3cbb6e84f5ea0"/>
+      <element xsi:type="archimate:Node" name="Local Authority Environment" id="id-2d1d92d4065d4753bba649875095da22"/>
+      <element xsi:type="archimate:SystemSoftware" name="Web Application Runtime" id="id-d22fe7e905204f43aa3db961bf496530"/>
+      <element xsi:type="archimate:SystemSoftware" name="Validation Tools" id="id-9fcdc4d0ca714fbfb8fd84eae39a14b9"/>
+      <element xsi:type="archimate:SystemSoftware" name="Local Data Connector" id="id-3cd03c87959947f29fc96b9c0cf0c71f"/>
+      <element xsi:type="archimate:TechnologyService" name="Hosting Service" id="id-f617586ffc934a79b47beeaeeeef4c13"/>
+      <element xsi:type="archimate:TechnologyService" name="Federated Data Access Service" id="id-d1f072473dea453ca14b5e059862cadf"/>
+    </folder>
+  </folder>
+  <folder name="Motivation" id="id-01dcf4dc985841868b324e75a0fb76fe" type="motivation">
+    <folder name="Principles" id="id-b0180c687bfc413597df097806804d65">
+      <element xsi:type="archimate:Principle" name="Open Source by Default (EUPL, MIT, Apache 2.0)" id="id-85da2163d3cb4365a76fd59ac1f341b6">
+        <documentation>Statement:
+- Software within the architecture is open source and published under a permissive license that allows unrestricted use, modification, and redistribution
+
+Implications:
+- Closed source requires explicit architectural justification
+- Licenses must be OSI-approved and permissive
+- Legal review is part of the exception process
+
+EUPL: European Union Public Licence (prefered). otherwise MIT, Apache 2.0</documentation>
+      </element>
+      <element xsi:type="archimate:Principle" name="Browser-first, low-friction access" id="id-4540606e7cf64e9c9853c31293f194b0">
+        <documentation>Principle
+- The system for analysis must be usable through a standard web browser, with no local installation or specialist client software.
+
+Rationale: Maximises accessibility for planners, workshops, and pilots; reduces operational and adoption barriers.
+
+Derived from statements
+1 User Interface (browser-based CesiumJS app)
+2 Tiling (streamed 3D Tiles in browser)
+6 OGC APIs (optional, not required for MVP)
+13 Security &amp; Privacy (no users/auth in MVP) 
+
+</documentation>
+      </element>
+      <element xsi:type="archimate:Principle" name="One canonical data model with stable identifiers" id="id-397378a5d6ba423c9d8dd6afe3aab135">
+        <documentation>Principle
+- A single canonical data model and stable identifiers must be used to link geometry, attributes, tiles, and scenarios.
+
+Rationale
+- Prevents ambiguity, brittle joins, and versioning chaos; enables reproducibility and interoperability.
+
+Derived from statements
+- 8 Canonical data model (CityJSON + Rooftop Passport)
+- 9 Identifier policy (MultiRoofs_ID everywhere)
+- 4 Data (BAG / canonical IDs as anchors)
+- 7 Domain APIs (attributes linked via IDs, not geometry)</documentation>
+      </element>
+      <element xsi:type="archimate:Principle" name="Minimal MVP with controlled extensibility" id="id-0922a95cd3d74d728dd79b25c0a61574">
+        <documentation>Principle
+- The MVP must minimise scope and operational complexity while explicitly leaving room for future extensions.
+Rationale
+- Avoids overengineering, keeps costs down, and supports learning through pilots.
+Derived from statements
+- 5 ETL / Ingestion (no upload UI, specialist-driven)
+- 11 Exports &amp; reporting (CSV/PDF only)
+- 13 Security &amp; Privacy (baseline protections only)
+- 15 Monitoring &amp; logging (basic, outside web app)
+16 Build &amp; deploy (simple repos, basic CI)</documentation>
+      </element>
+      <element xsi:type="archimate:Principle" name="Precompute complexity, keep interaction fast" id="id-0b968375ef50499983fcbf1dc6c20798">
+        <documentation>Principle
+- Computationally heavy processing must occur offline; runtime interaction must remain fast, predictable, and lightweight.
+Rationale
+- Ensures smooth workshops, deterministic results, and avoids costly real-time processing.
+Derived from statements
+- 2 Tiling (pre-generated 3D Tiles)
+- 5 ETL / Ingestion (offline preprocessing, validation)
+- 10 Scenario / calculation (precomputed scores, fast reweighting) - @@In what proces/component is fast reweighting executed?
+- 14 Testing &amp; conformance (validation before use)</documentation>
+      </element>
+      <element xsi:type="archimate:Principle" name="Open standards by default, vendor services as optional accelerators" id="id-11366d44cf12415f9ad7344550ad1974">
+        <documentation>Principle
+- Open standards are the baseline; proprietary or hosted services may be used only where they clearly accelerate delivery without locking in.
+Rationale
+- Protects long-term interoperability and reuse while allowing pragmatic MVP choices.
+Derived from statements
+- 2 Tiling (3D Tiles open standard, Cesium Ion optional)
+- 6 OGC APIs (standards-based, optional)
+- 8 Canonical data model (CityJSON LoD2.2, extensions)
+- 12 Metadata &amp; catalogue (ISO19115 / DCAT alignment)</documentation>
+      </element>
+      <element xsi:type="archimate:Principle" name="Store data where we can govern it, move it, and protect it" id="id-ae19e6f9e46d4d8c906a89bb1c32b011">
+        <documentation> @@should this be a principle?
+
+Data sovereignty
+
+Rationale (Why this matters)
+
+This principle ensures that storage decisions are not driven primarily by convenience, vendor features, or cost, but by the ability to actually govern the data.
+
+It emphasizes that true data sovereignty requires:
+	•	Enforceable control: you must be able to technically and legally enforce who can access the data and under which conditions.
+	•	Governance by design: policies for retention, classification, auditing, and sharing must be executable, not aspirational.
+	•	Portability and exit readiness: data must remain movable without dependency traps, enabling strategic flexibility.
+	•	Capability over paperwork: contracts are important, but sovereignty is only real if you can prove it operationally.
+
+In short: the safest place for data is not where it is “allowed” to be stored, but where you can still steer it.</documentation>
+      </element>
+    </folder>
+    <folder name="Requirements" id="id-75c31d97e1f44cd09f89e71ee1acdf81">
+      <element xsi:type="archimate:Requirement" name="3D city viewer" id="id-cd6e946364554a32a7922db0d6911f5f">
+        <documentation>View and navigate the 3D twin; pan/zoom/orbit; roof colouring.</documentation>
+      </element>
+      <element xsi:type="archimate:Requirement" name="CityJSON dataset (LOD2.2)" id="id-315f8e343fc1488eb8c9a6061109e29f">
+        <documentation>CityJSON dataset prepared (LOD2.2) with conformance checks.</documentation>
+      </element>
+      <element xsi:type="archimate:Requirement" name="Configurable calculation parameters" id="id-d518b7747b504cf892fbe507b981e218">
+        <documentation>Change inputs and parameters of the calculation engine/model.</documentation>
+      </element>
+      <element xsi:type="archimate:Requirement" name="DCAT-AP metadata record" id="id-fbb9aef6898b4d74ab3c301359ac6fc9">
+        <documentation>DCAT-style metadata record (coverage, cadence, licence, contact).</documentation>
+      </element>
+      <element xsi:type="archimate:Requirement" name="ETL to CityJSON" id="id-d0c77388b8424c1297978555360bfd70">
+        <documentation>ETL to transform input data to CityJSON.</documentation>
+      </element>
+      <element xsi:type="archimate:Requirement" name="Export Analysis result into CSV, PDF" id="id-3dff4c8f520f40339c0f6a343f5d1d0a">
+        <documentation>A roof with it's characterics. The most important details to use in the potential usage. 
+A rooftop passport is basically a standardized digital profile of a building’s roof — a single, shared source of truth that describes what a roof is, can do, and is allowed to do.
+
+🏗️ Physical characteristics
+	•	Roof type (flat, pitched)
+	•	Surface area &amp; usable area
+	•	Load-bearing capacity
+	•	Orientation and slope
+	•	Height and accessibility
+
+🌞 Potential &amp; use cases
+	•	Solar energy potential (PV, solar thermal)
+	•	Green roof suitability (water retention, biodiversity)
+	•	Blue roof potential (water buffering)
+	•	Space for heat pumps or other installations
+
+📜 Rules &amp; constraints
+	•	Zoning and building regulations
+	•	Heritage or monument restrictions
+	•	Fire safety and access rules
+	•	Ownership and split incentives (VvE / HOA)
+
+📊 Operational context (optional)
+	•	Current installations
+	•	Maintenance status
+	•	Links to energy use, climate goals, or subsidy schemes
+</documentation>
+      </element>
+      <element xsi:type="archimate:Requirement" name="Exports (CSV/GeoJSON/report)" id="id-76d31caf0f0d4383bc9dd967844b8a26">
+        <documentation>CSV/GeoJSON export; exportable scenario report with summary KPIs.</documentation>
+      </element>
+      <element xsi:type="archimate:Requirement" name="Federated hybrid hosting" id="id-db81cd5399124da5b3e7ba2f10717410">
+        <documentation>Central cloud for open info; local component for sensitive processing.</documentation>
+      </element>
+      <element xsi:type="archimate:Requirement" name="Filtering and sorting" id="id-dd8c944a64f3484cb826016b6d813d17">
+        <documentation>Filter/sort buildings by attributes (owner type, energy label, confidence score, etc.).</documentation>
+      </element>
+      <element xsi:type="archimate:Requirement" name="Layer toggling and comparison" id="id-f45c6cc95290472aba2d2134d9b86383">
+        <documentation>Toggle hard and calculated layers; compare layers.</documentation>
+      </element>
+      <element xsi:type="archimate:Requirement" name="Methodology transparency" id="id-8ebfd503693a448ab7bcf6c21863b8b2">
+        <documentation>Information section explaining methodology; adjust parameters to local preferences.</documentation>
+      </element>
+      <element xsi:type="archimate:Requirement" name="Modular monolith initially" id="id-147c6dc065324707b141f61ecdb863c3">
+        <documentation>Start as modular monolith; split later if needed.</documentation>
+      </element>
+      <element xsi:type="archimate:Requirement" name="MultiRoofs_ID generation" id="id-d27ad2a90ca14a6dafd6f6c7bd6658d0">
+        <documentation>Generate IDs where authoritative IDs missing, incl. provenance + confidence.</documentation>
+      </element>
+      <element xsi:type="archimate:Requirement" name="MVP open data only" id="id-0b4a4e4925b348de81d45b467d4f3305">
+        <documentation>MVP uses publicly available non-sensitive data; sensitive data stays local if used.</documentation>
+      </element>
+      <element xsi:type="archimate:Requirement" name="Per-roof inspection" id="id-14b2b5aed3dd47ffb8577e88c15467c2">
+        <documentation>Inspect geometry and metrics per building/roof.</documentation>
+      </element>
+      <element xsi:type="archimate:Requirement" name="Policy objective allocation" id="id-3c49b4b8dcdc453ea9428f4326cf4677">
+        <documentation>Allocate city/municipal objectives to neighbourhood based on quick scan potential.</documentation>
+      </element>
+      <element xsi:type="archimate:Requirement" name="Public read access (MVP)" id="id-bec40c106f524f7ba6264367e1e135cf">
+        <documentation>Public-read access by default; note future OIDC/RBAC for protected datasets.</documentation>
+      </element>
+      <element xsi:type="archimate:Requirement" name="Scenario comparison" id="id-125dd5af4d7c4c509be9261fc42da8fc">
+        <documentation>Compare multiple scenarios with exports and maps.</documentation>
+      </element>
+      <element xsi:type="archimate:Requirement" name="Scenario engine (MVP)" id="id-792602f141a54d39a1b01a552a20ba07">
+        <documentation>Create one scenario, set simple weights, compute and visualise results.</documentation>
+      </element>
+      <element xsi:type="archimate:Requirement" name="Sensitive buildings should not be visible to everyone" id="id-89e216e7b5dc42f49f79252fd97a30b3">
+        <documentation>Perhaps the webviewer should not be open to everyone, so only authorized people. 
+Not showing the buildings may lead to missing data conclusion (Sara)
+Ali: guideline from government is required. Jan Henk: we cannot decide ourselves. 
+Hiske: Technical feasible? Yes</documentation>
+      </element>
+      <element xsi:type="archimate:Requirement" name="The user can save and re-open a 3D scenario with the same settings (angle, zoom, area)" id="id-c70c3368868544ab94c1677e06006ba4">
+        <documentation>angle, zoom, pan location, visible layers, parameters, filters</documentation>
+      </element>
+      <element xsi:type="archimate:Requirement" name="Users can self-serve" id="id-1ad9542463f74408b225ac634892c984">
+        <documentation>Users should be able to use the tool by themselves (no facilitator required).</documentation>
+      </element>
+      <element xsi:type="archimate:Requirement" name="Validation (val3dity/CityJSON validator)" id="id-4fabb227674046fd99d9fe3b6b188cf6">
+        <documentation>CityJSON conformance checks using validation tooling.</documentation>
+      </element>
+    </folder>
+    <folder name="Goals" id="id-45653439c787481583fb919a878cf400">
+      <element xsi:type="archimate:Goal" name="Enable rooftop utilisation decision support" id="id-cf3839c9a7774c9ba2508e9141956a28">
+        <documentation>Provide a tool to explore rooftop potential and support decisions.</documentation>
+      </element>
+      <element xsi:type="archimate:Goal" name="Enable scenario-based exploration" id="id-b7b28b8c19ee4b01b24ab2942a666b22">
+        <documentation>Allow creation, comparison and export of rooftop utilisation scenarios.</documentation>
+      </element>
+      <element xsi:type="archimate:Goal" name="Reusable reference solution for Local Authorities" id="id-affd97544161460f8ac1c4a4103eac78">
+        <documentation>Standardised reference solution with per-LA configuration.</documentation>
+      </element>
+      <element xsi:type="archimate:Outcome" name="Shared understanding of rooftop potential" id="id-c1c6bc6ac9ce4dc68faf8466cc62a1cd">
+        <documentation>Stakeholders align on opportunities/constraints via common visualisations and metrics.</documentation>
+      </element>
+    </folder>
+    <folder name="Drivers" id="id-fd0624525ba84ab4a7fb74f771ea1f9e">
+      <element xsi:type="archimate:Driver" name="Need for cross-stakeholder dialogue" id="id-0a431cbe23044e0eaec24bf5ab77599e">
+        <documentation>Facilitate discussion between experts/parties involved in urban planning and development.</documentation>
+      </element>
+      <element xsi:type="archimate:Driver" name="Need for evidence-based urban planning" id="id-2db646cb54b34368bd79b37befe099e9">
+        <documentation>Support policy and planning with quantitative and spatial insight.</documentation>
+      </element>
+      <element xsi:type="archimate:Driver" name="Need for interoperability and standards" id="id-2b3ccaf7a73045e7a83f99c7cc195596">
+        <documentation>Conform to CityJSON, DCAT-AP, MIM7 and (future) OGC APIs.</documentation>
+      </element>
+    </folder>
+  </folder>
+  <folder name="Implementation &amp; Migration" id="id-9a0e74dc726f4af390dcbaabff00d88b" type="implementation_migration">
+    <folder name="Implementation" id="id-7b70bf52dbff46caae365d934caab283">
+      <element xsi:type="archimate:Plateau" name="MVP Plateau (31-12-2026)" id="id-ad0b132722ee423fa0971b39c9a8c2c1">
+        <documentation>MVP delivered on 31-12-2026.</documentation>
+      </element>
+      <element xsi:type="archimate:Plateau" name="Working Product Plateau (2028)" id="id-4b16abba9313439dad8ecb3c955dae94">
+        <documentation>Full working product delivered in 2028.</documentation>
+      </element>
+      <element xsi:type="archimate:WorkPackage" name="Develop MVP" id="id-a100379c57bd4710a9fa0ba75aed3950">
+        <documentation>- The MVP must minimise scope and operational complexity while explicitly leaving room for future extensions.
+
+Rationale
+- Avoids overengineering, keeps costs down, and supports learning through pilots.
+Derived from statements
+- 5 ETL / Ingestion (no upload UI, specialist-driven)
+- 11 Exports &amp; reporting (CSV/PDF only)
+- 13 Security &amp; Privacy (baseline protections only)
+- 15 Monitoring &amp; logging (basic, outside web app)
+16 Build &amp; deploy (simple repos, basic CI)</documentation>
+      </element>
+      <element xsi:type="archimate:WorkPackage" name="Implement Scenario Engine" id="id-267da286ab7b4dbb856c6c5969d4c531">
+        <documentation>Minimal scenario engine for MVP.</documentation>
+      </element>
+      <element xsi:type="archimate:WorkPackage" name="Prepare CityJSON dataset" id="id-1d821a6a528e4636878121b78876bf1d">
+        <documentation>ETL + validation + ID generation.</documentation>
+      </element>
+      <element xsi:type="archimate:WorkPackage" name="Publish metadata and exports" id="id-ecf02552940047ee9483dab2c2051047">
+        <documentation>DCAT-AP metadata + export formats.</documentation>
+      </element>
+      <element xsi:type="archimate:Deliverable" name="MVP Tool" id="id-5265a6d1cab24f91a44ee2e44ec0c77a"/>
+      <element xsi:type="archimate:Deliverable" name="Scenario Report" id="id-dfa7a4c5674b4b52bf9b9bdee971695f"/>
+      <element xsi:type="archimate:Deliverable" name="User Guide" id="id-8d778bb76d2f4998bdd7bd41fd71bc4d"/>
+      <element xsi:type="archimate:Deliverable" name="One-page Methodology" id="id-9c806a3eef1a419fac5c827b3e24fc0a"/>
+    </folder>
+  </folder>
+  <folder name="Other" id="id-5abe751ffba6488a8fe64c1944973651" type="other"/>
+  <folder name="Relations" id="id-13cbb276520349a1b44ef22da5ca291a" type="relations">
+    <element xsi:type="archimate:InfluenceRelationship" id="id-94ef914536884d998eb566044294ec7d" source="id-0a431cbe23044e0eaec24bf5ab77599e" target="id-cf3839c9a7774c9ba2508e9141956a28"/>
+    <element xsi:type="archimate:InfluenceRelationship" id="id-402cb78072a544ba9ac4659e2e432c7f" source="id-2db646cb54b34368bd79b37befe099e9" target="id-cf3839c9a7774c9ba2508e9141956a28"/>
+    <element xsi:type="archimate:InfluenceRelationship" id="id-8e1ee8a6783f49688eb7ba4f72545e39" source="id-2b3ccaf7a73045e7a83f99c7cc195596" target="id-affd97544161460f8ac1c4a4103eac78"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-5141a47282b8468799f2be0eafd1b101" source="id-cf3839c9a7774c9ba2508e9141956a28" target="id-c1c6bc6ac9ce4dc68faf8466cc62a1cd"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-c6afafa996c64bb59a4ae2f1c76cf531" source="id-cf3839c9a7774c9ba2508e9141956a28" target="id-1ad9542463f74408b225ac634892c984"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-a7e9a0d3d6594408a259ac8968a3fc35" source="id-cf3839c9a7774c9ba2508e9141956a28" target="id-cd6e946364554a32a7922db0d6911f5f"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-721d049bf254485382b377e34f132909" source="id-cf3839c9a7774c9ba2508e9141956a28" target="id-f45c6cc95290472aba2d2134d9b86383"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-593f6146d1b84d308b84826717de62f3" source="id-cf3839c9a7774c9ba2508e9141956a28" target="id-14b2b5aed3dd47ffb8577e88c15467c2"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-c59e5a7e601d4719a3a984e0ae788a62" source="id-cf3839c9a7774c9ba2508e9141956a28" target="id-d518b7747b504cf892fbe507b981e218"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-c8ad12be6c064fe194a0dc58a61d0003" source="id-cf3839c9a7774c9ba2508e9141956a28" target="id-dd8c944a64f3484cb826016b6d813d17"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-299986717cca48b39034a616c9ce482c" source="id-cf3839c9a7774c9ba2508e9141956a28" target="id-8ebfd503693a448ab7bcf6c21863b8b2"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-4d39dc55bb5b4e409e3c2a575a3dd6c5" source="id-cf3839c9a7774c9ba2508e9141956a28" target="id-3c49b4b8dcdc453ea9428f4326cf4677"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-af9efdb57fa2415cbb2a233f47b21c50" source="id-b7b28b8c19ee4b01b24ab2942a666b22" target="id-792602f141a54d39a1b01a552a20ba07"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-f3b60f0df47940a499e1a1bd49db413c" source="id-b7b28b8c19ee4b01b24ab2942a666b22" target="id-125dd5af4d7c4c509be9261fc42da8fc"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-40d7256464354430b5f2d64766a0b8f5" source="id-b7b28b8c19ee4b01b24ab2942a666b22" target="id-76d31caf0f0d4383bc9dd967844b8a26"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-09857f8f691140939920f7078e40453f" source="id-affd97544161460f8ac1c4a4103eac78" target="id-315f8e343fc1488eb8c9a6061109e29f"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-2d561baa4b624233a3241e59f46bb2b2" source="id-affd97544161460f8ac1c4a4103eac78" target="id-d0c77388b8424c1297978555360bfd70"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-8a11375fab1841e68cde4c96c7ed983a" source="id-affd97544161460f8ac1c4a4103eac78" target="id-4fabb227674046fd99d9fe3b6b188cf6"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-eef46c49abfa4e5cb0f707f5909601ad" source="id-cf3839c9a7774c9ba2508e9141956a28" target="id-d27ad2a90ca14a6dafd6f6c7bd6658d0"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-1255b8c5fb934a05aa106330c684879d" source="id-affd97544161460f8ac1c4a4103eac78" target="id-fbb9aef6898b4d74ab3c301359ac6fc9"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-367f34de212449dfa5b11d1811cb672e" source="id-cf3839c9a7774c9ba2508e9141956a28" target="id-0b4a4e4925b348de81d45b467d4f3305"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-b3632924ab4b4e2c9d89db4e2f959542" source="id-cf3839c9a7774c9ba2508e9141956a28" target="id-bec40c106f524f7ba6264367e1e135cf"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-4293384be0ae4c40872f7a6090e068ae" source="id-cf3839c9a7774c9ba2508e9141956a28" target="id-db81cd5399124da5b3e7ba2f10717410"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-0d3505b193d346a781d9dc0b831703d1" source="id-cf3839c9a7774c9ba2508e9141956a28" target="id-147c6dc065324707b141f61ecdb863c3"/>
+    <element xsi:type="archimate:InfluenceRelationship" id="id-4368a788cf32480f9b4696fee8a305fa" source="id-2ffb78f8ecd14e36a5939d87c0809d3b" target="id-cf3839c9a7774c9ba2508e9141956a28"/>
+    <element xsi:type="archimate:InfluenceRelationship" id="id-ca27ea0274b8416881fcd786f84eb23c" source="id-3c6b598611b34d4b89c2ec9a1446eb70" target="id-cf3839c9a7774c9ba2508e9141956a28"/>
+    <element xsi:type="archimate:InfluenceRelationship" id="id-21b615d0642145b3b684fe4c0a064022" source="id-c085160b51624599bdefdf5fa3045a0c" target="id-b7b28b8c19ee4b01b24ab2942a666b22"/>
+    <element xsi:type="archimate:InfluenceRelationship" id="id-22aeeea812b74b6abd7b8ef29a4f6af3" source="id-310e223c200f4d3ab6d3bd0b0c7d6e0e" target="id-b7b28b8c19ee4b01b24ab2942a666b22"/>
+    <element xsi:type="archimate:InfluenceRelationship" id="id-f047f13b8a2540a6bb1302661d5cd8b5" source="id-1785ffcc6f134883af7b5f4a750caaa4" target="id-affd97544161460f8ac1c4a4103eac78"/>
+    <element xsi:type="archimate:InfluenceRelationship" id="id-bab3a865cef545c697f097a0134991cd" source="id-fc25d11d888c4de99f4bb2dd720266fd" target="id-b7b28b8c19ee4b01b24ab2942a666b22"/>
+    <element xsi:type="archimate:InfluenceRelationship" id="id-e8de9fd42c424e92978113256a8cebf5" source="id-3b8a87b2d2bd47ecb22dcd7ca062d69d" target="id-affd97544161460f8ac1c4a4103eac78"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-42e1402f858840e491f126961af37079" source="id-8dd48d056b854bb5952620c169eb62a1" target="id-c085160b51624599bdefdf5fa3045a0c"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-c6e000c78b09480084cc29662a07b6b0" source="id-4b4f996333a44d57895ad9b1ef4cdd71" target="id-2ffb78f8ecd14e36a5939d87c0809d3b"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-8f9f3ec70e24474ebed85e037698e50a" source="id-1043053a4cb14ef1a0c8efe26c48f952" target="id-3b8a87b2d2bd47ecb22dcd7ca062d69d"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-147e4d147476437e8e58cb8aebc21d06" source="id-f89a2187e950440abafa6b886d56955f" target="id-1785ffcc6f134883af7b5f4a750caaa4"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="id-f7b840ef9b2b4647a35ed49db5cdd41c" source="id-3b39eb1e83ab47c7a1bb59b11d28f50b" target="id-dc37ea2af4f947ee914ca3ee8cf07273"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="id-0fab1d055945426084c352c8e18e0779" source="id-6e68855fbd0d42c49e0c7e381e0d1ac0" target="id-cbe871396a6e4767a271575e3ef99f4b"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="id-4aebe14a91004abba32e3567a9a89aca" source="id-663a4f91e6974131b546466e0428cac6" target="id-1bf6211c29eb47ee9dc749effbaf9180"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="id-7002c1a822cb4e0c9ef23bc2f2b18e42" source="id-24b13f7b01e44e6980d89e7dda262c91" target="id-ccec358c48e643dd9dd9638569cea80b"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="id-50104676b69c4366b9e9f29f037eebf4" source="id-dc37ea2af4f947ee914ca3ee8cf07273" target="id-ef3270d816b24fe7ae9aa8954cf5ac2f"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="id-9275977fc97d43bfb392780bee3c9dff" source="id-dc37ea2af4f947ee914ca3ee8cf07273" target="id-eeaab8e87f654ec197b11d6147777837"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="id-92cc1f985ba54c448bdfa3a6f243d61c" source="id-dc37ea2af4f947ee914ca3ee8cf07273" target="id-0639181d2a864733b0ca2182138b15c6"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="id-7a66a83ac4524edcb814e28a150c76ad" source="id-1bf6211c29eb47ee9dc749effbaf9180" target="id-fc6d28b109b74b288fa0ff5cda4d0cad"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="id-5cf532408aac44aca17f746917ae0e80" source="id-cbe871396a6e4767a271575e3ef99f4b" target="id-4188cf0e07f34246a2cfac0e29a3e1b0"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="id-4613b89306454101abde48ba4bcf86fd" source="id-cbe871396a6e4767a271575e3ef99f4b" target="id-0dd3982599044021a6baef6fd694257b"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="id-c6b61e720009458daeb18a7acc59441e" source="id-dc37ea2af4f947ee914ca3ee8cf07273" target="id-e1cd6a1dea8f43228e42b73c0e95e219"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-1186128a7e714001a43feae33953b285" source="id-ef3270d816b24fe7ae9aa8954cf5ac2f" target="id-d37e581a679d449d84f0ea0771fd3570"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-ed3fb76ba1494958abe1e34069687fec" source="id-eeaab8e87f654ec197b11d6147777837" target="id-d37e581a679d449d84f0ea0771fd3570"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-5d1258196c37451b9fd7f6c9d00f6377" source="id-0639181d2a864733b0ca2182138b15c6" target="id-8d36a5b5a1754a9ba8030dcdcb111624"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-cb86f48c4c5743e19a50b1149d954af9" source="id-fc6d28b109b74b288fa0ff5cda4d0cad" target="id-8d36a5b5a1754a9ba8030dcdcb111624"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-d52f222da6a14a4ea02e8763a10f9fe7" source="id-4188cf0e07f34246a2cfac0e29a3e1b0" target="id-8d36a5b5a1754a9ba8030dcdcb111624"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-2f68584cd5b04882a0b4c327bdc1cfd5" source="id-0dd3982599044021a6baef6fd694257b" target="id-bb795642346b4a8db4dab58c442ef61f"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-70e5bd25b558463586813e7e0ee4998c" source="id-e1cd6a1dea8f43228e42b73c0e95e219" target="id-d37e581a679d449d84f0ea0771fd3570"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-4c7430b402f94241ad23f622c192e90a" source="id-cdfe1b18223844c89926bb15f47ace56" target="id-a69665c4906c415aa4bda8f03f57612d"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-c1b9b15f39fa4ab4af88ee1951722427" source="id-b6e51244fbdc4cc485291ac765c22fa0" target="id-d0e221f9a1914ead80d02f3ba82ae67f"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-49db17ba97b246b9bace5fc1a4b5ba4c" source="id-e9260a46ab3b4973bed6419036d918ea" target="id-f45057f6ccba4a50adf667f0a4482c07"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-c73a1ef2fa2844a184c83b0e3ba1750a" source="id-556488bbb5084c8abc3b430d5dbd38f2" target="id-f1775408653644bdbd6d22a73ceeb73f"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-d6078688a2d04975a12e04f2d3f5c3fa" source="id-bb5db2657fe146228390b9b46e067031" target="id-67aac19b8599447e84ec774fee4e93a4"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-6cb309053653449080eb4449e44d74ad" source="id-ca2121a82d76479fa449c3d9c4edb193" target="id-c558e4fefd1041c991a5d9258980a3f0"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-5c770410054b4c6bb64c5fd8da469690" source="id-7d8c0b7db59241bd8efd4c45cdf6f582" target="id-c558e4fefd1041c991a5d9258980a3f0"/>
+    <element xsi:type="archimate:ServingRelationship" id="id-ae91491655a04b38a9062942e17a7811" source="id-a69665c4906c415aa4bda8f03f57612d" target="id-f9dabba9589b49019a5258e9ffd56358"/>
+    <element xsi:type="archimate:ServingRelationship" id="id-621597cd88ce4e648007a1f05a42931a" source="id-f45057f6ccba4a50adf667f0a4482c07" target="id-f9dabba9589b49019a5258e9ffd56358"/>
+    <element xsi:type="archimate:ServingRelationship" id="id-95cf4d656523422ebfe8d6a33cf812df" source="id-67aac19b8599447e84ec774fee4e93a4" target="id-f9dabba9589b49019a5258e9ffd56358"/>
+    <element xsi:type="archimate:ServingRelationship" id="id-c782a92494d4439e93bd5cdcfa2e77bb" source="id-c558e4fefd1041c991a5d9258980a3f0" target="id-aee1c4bdf7e3490f944fb897b6306b17"/>
+    <element xsi:type="archimate:AccessRelationship" id="id-3bd73591df114f7c98ade22398c01724" source="id-cdfe1b18223844c89926bb15f47ace56" target="id-f4397ef6bd79438abf4137af1b2206d4" accessType="1"/>
+    <element xsi:type="archimate:AccessRelationship" id="id-8df70959d7414669ab5b64228d3df0aa" source="id-b6e51244fbdc4cc485291ac765c22fa0" target="id-863e111057ce4cbf982494fb9f6d982f"/>
+    <element xsi:type="archimate:AccessRelationship" id="id-4ab8ae82d8c246329764e047538ab739" source="id-e9260a46ab3b4973bed6419036d918ea" target="id-7f1f15a6b7a549bcaf16fa91a5db17b0"/>
+    <element xsi:type="archimate:AccessRelationship" id="id-b8b50ac5e1cd4f309f241cc6740b744d" source="id-ca2121a82d76479fa449c3d9c4edb193" target="id-10467fe8d2814b5995731c5afef946de"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="id-797a1c4a6ead4d4d8ec4ee07176bd648" source="id-847a59852cdd41368ed3cbb6e84f5ea0" target="id-f617586ffc934a79b47beeaeeeef4c13"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="id-b8133f06cd854724b9c9d2c9317df08a" source="id-2d1d92d4065d4753bba649875095da22" target="id-d1f072473dea453ca14b5e059862cadf"/>
+    <element xsi:type="archimate:CompositionRelationship" id="id-6a45625a06fe4d19812797ae6a1e1d73" source="id-ad0b132722ee423fa0971b39c9a8c2c1" target="id-a100379c57bd4710a9fa0ba75aed3950"/>
+    <element xsi:type="archimate:CompositionRelationship" id="id-2a2b702b0c9a4454aab4198f47f13e52" source="id-ad0b132722ee423fa0971b39c9a8c2c1" target="id-267da286ab7b4dbb856c6c5969d4c531"/>
+    <element xsi:type="archimate:CompositionRelationship" id="id-9885fb35c0ce452f906e14f72b786c6f" source="id-ad0b132722ee423fa0971b39c9a8c2c1" target="id-1d821a6a528e4636878121b78876bf1d"/>
+    <element xsi:type="archimate:CompositionRelationship" id="id-84d569f6f16b493bbbc39e10ea229295" source="id-ad0b132722ee423fa0971b39c9a8c2c1" target="id-ecf02552940047ee9483dab2c2051047"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-3998a25893834f80948eb4cfad1f050f" source="id-a100379c57bd4710a9fa0ba75aed3950" target="id-5265a6d1cab24f91a44ee2e44ec0c77a"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-0077e4bbc2d546cf8f7eeaa2d9524fbc" source="id-267da286ab7b4dbb856c6c5969d4c531" target="id-dfa7a4c5674b4b52bf9b9bdee971695f"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-280e5cc412324a1290924f1c56262711" source="id-ecf02552940047ee9483dab2c2051047" target="id-dfa7a4c5674b4b52bf9b9bdee971695f"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-dead7394440c46f7afbf4879a06b3033" source="id-a100379c57bd4710a9fa0ba75aed3950" target="id-8d778bb76d2f4998bdd7bd41fd71bc4d"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-de867c781cc34a7792cf5761977b5598" source="id-a100379c57bd4710a9fa0ba75aed3950" target="id-9c806a3eef1a419fac5c827b3e24fc0a"/>
+    <element xsi:type="archimate:ServingRelationship" id="id-68771ea1df9e437c84267ee1ec13741d" source="id-f9dabba9589b49019a5258e9ffd56358" target="id-8d36a5b5a1754a9ba8030dcdcb111624"/>
+    <element xsi:type="archimate:TriggeringRelationship" id="id-75d9de3d4f0a4b0aa0ba685eb8686651" source="id-cdfe1b18223844c89926bb15f47ace56" target="id-e992e4fa9f384e90b94e00090b592781"/>
+    <element xsi:type="archimate:ServingRelationship" id="id-67bcd803506a4fc4af3351b213c156d0" source="id-cdfe1b18223844c89926bb15f47ace56" target="id-e992e4fa9f384e90b94e00090b592781"/>
+    <element xsi:type="archimate:ServingRelationship" id="id-94b74233f3a94ff2b0048a0609a499dd" source="id-cdfe1b18223844c89926bb15f47ace56" target="id-75b2570013b64672a77a55ce825f17c3"/>
+    <element xsi:type="archimate:ServingRelationship" id="id-694fa3363d2340fd94d0e82013f955ae" source="id-cdfe1b18223844c89926bb15f47ace56" target="id-c9fbd92ecb02423f8ef3ff2d85419138"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="id-0eb49ed1791c490cb06d3431c896e5f0" source="id-cbe871396a6e4767a271575e3ef99f4b" target="id-a163cfd1899c4616a54fde1fcca8b27d"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-fa43dfc8b6d04aaebb7a88c6f4a59a0a" source="id-a163cfd1899c4616a54fde1fcca8b27d" target="id-8d36a5b5a1754a9ba8030dcdcb111624"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-fbf55be090b34cbda86abbe55e8d6f3c" source="id-3f6d5687c4174c5fa3b18b120b97cbdb" target="id-8d36a5b5a1754a9ba8030dcdcb111624"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-b346274eb1e0431782fb27a4b0563b89" source="id-1aaa9b3356ab487f87b92242d200360a" target="id-8d36a5b5a1754a9ba8030dcdcb111624"/>
+    <element xsi:type="archimate:TriggeringRelationship" id="id-c352c0c15e384d1d89394d6473cb6409" source="id-d0e221f9a1914ead80d02f3ba82ae67f" target="id-a765c88a06324964b98c3887ee72519c"/>
+    <element xsi:type="archimate:TriggeringRelationship" id="id-3740023e0472481b8f38c12effcbd0d1" source="id-f1775408653644bdbd6d22a73ceeb73f" target="id-a765c88a06324964b98c3887ee72519c"/>
+    <element xsi:type="archimate:TriggeringRelationship" id="id-d847d26aaf4c4f7fa1a14fc6e2fae141" source="id-f45057f6ccba4a50adf667f0a4482c07" target="id-a765c88a06324964b98c3887ee72519c"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-3fd10740e42d43a18a4ad51b9286fdff" source="id-8fa4360278fa480c973a4e7f5efc91a1" target="id-a69665c4906c415aa4bda8f03f57612d"/>
+    <element xsi:type="archimate:AccessRelationship" id="id-7312141a333f452e946d671b7c934ce5" source="id-8fa4360278fa480c973a4e7f5efc91a1" target="id-c0c88ed6a1624239a70f045a799467cf"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-d47ea1c2d647477aafc57a350a6c33d6" source="id-0639181d2a864733b0ca2182138b15c6" target="id-d37e581a679d449d84f0ea0771fd3570"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-4f21848486234964849a60db4d196b75" source="id-fc6d28b109b74b288fa0ff5cda4d0cad" target="id-d37e581a679d449d84f0ea0771fd3570"/>
+    <element xsi:type="archimate:TriggeringRelationship" id="id-647a0429928c4c5e89b6752b31dae434" source="id-a765c88a06324964b98c3887ee72519c" target="id-d37e581a679d449d84f0ea0771fd3570"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-cc7823096f7e42e0a95c208702e6a10c" source="id-c0c88ed6a1624239a70f045a799467cf" target="id-c70c3368868544ab94c1677e06006ba4"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-1307efe2ad264f1eb65fedbd2307f485" source="id-75b2570013b64672a77a55ce825f17c3" target="id-89e216e7b5dc42f49f79252fd97a30b3"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-36f413f84f174fdb9e79be64517cf043" source="id-cdfe1b18223844c89926bb15f47ace56" target="id-89e216e7b5dc42f49f79252fd97a30b3"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-afeb60d820fb45b5989b4c8d58f8ef3b" source="id-8fa4360278fa480c973a4e7f5efc91a1" target="id-c70c3368868544ab94c1677e06006ba4"/>
+    <element xsi:type="archimate:AccessRelationship" id="id-26e899e436c5494495676b83c5b52bd8" source="id-331f2ff8543d43c18664e30cfca43b55" target="id-dd6bf5c0f154400997b7c94d2febfdda"/>
+    <element xsi:type="archimate:AccessRelationship" id="id-6957937d0613435b9b4579d22dd5f35b" source="id-cdfe1b18223844c89926bb15f47ace56" target="id-dd6bf5c0f154400997b7c94d2febfdda" accessType="1"/>
+    <element xsi:type="archimate:AccessRelationship" id="id-123146ccc7fa47a6839d817dc24e1090" source="id-331f2ff8543d43c18664e30cfca43b55" target="id-f4397ef6bd79438abf4137af1b2206d4" accessType="1"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-1fe4a63384d34ce3bcd626813894c2e5" source="id-0a9d4422b1864c139cde31c460bffd04" target="id-825b7583bbab4742b7af273e2325dd60"/>
+    <element xsi:type="archimate:AccessRelationship" id="id-6945848e09464101b22a5a9bf6984128" source="id-825b7583bbab4742b7af273e2325dd60" target="id-0a9d4422b1864c139cde31c460bffd04" accessType="1"/>
+    <element xsi:type="archimate:AccessRelationship" id="id-665587a8def6442db935a707fdbf358c" source="id-825b7583bbab4742b7af273e2325dd60" target="id-f4397ef6bd79438abf4137af1b2206d4"/>
+    <element xsi:type="archimate:TriggeringRelationship" id="id-c3a47595f1ee407f9d995808aef8f48d" source="id-f95d7d02658442fd99c1bbbab85388da" target="id-825b7583bbab4742b7af273e2325dd60"/>
+    <element xsi:type="archimate:TriggeringRelationship" id="id-94bead73b7e24355b056c3e466efb2dd" source="id-f95d7d02658442fd99c1bbbab85388da" target="id-331f2ff8543d43c18664e30cfca43b55"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-0c2e212fb49c40d69c8aedd8b3029777" source="id-cdfe1b18223844c89926bb15f47ace56" target="id-3dff4c8f520f40339c0f6a343f5d1d0a"/>
+    <element xsi:type="archimate:ServingRelationship" id="id-5828a3087fcc4222b3ba8785f8dd6a62" source="id-869d31c9a8734de98e75e783e3dd7322" target="id-f9dabba9589b49019a5258e9ffd56358"/>
+    <element xsi:type="archimate:ServingRelationship" id="id-36f7094bea5e404db49b5a2d02d31cc7" source="id-7f441c3df67648fbb73267a8b76552ca" target="id-f9dabba9589b49019a5258e9ffd56358"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-f3873df757b849cb81b73b6a230d6f64" source="id-cdfe1b18223844c89926bb15f47ace56" target="id-a387116121454f55adb75f387ee5b1d2"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-6df66fb20971403abf7979001492bb20" source="id-cdfe1b18223844c89926bb15f47ace56" target="id-935fd031f9194f07a63effa1d71590d6"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-8616784a66a947e5839e570b70bbaa2f" source="id-cdfe1b18223844c89926bb15f47ace56" target="id-ec7d1e85f87b4410ac1606d4df223b6d"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-ba8d6e60a4ca4fa2b536a31e01369b0a" source="id-cdfe1b18223844c89926bb15f47ace56" target="id-870eefc232f54fe29607e5914092030d"/>
+    <element xsi:type="archimate:AccessRelationship" id="id-00df5c908ce74a32b00c1acb9e8c9bcc" source="id-870eefc232f54fe29607e5914092030d" target="id-09d196df585645b2bd6fba29c9d421b6"/>
+    <element xsi:type="archimate:AccessRelationship" id="id-4130cda476804f578c5df5e2fb3c97da" source="id-a387116121454f55adb75f387ee5b1d2" target="id-bf889db792c74dd2b0e8bfcd472b2232" accessType="3"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-f8d7f67f06d54668a6d79e65659c1af7" source="id-935fd031f9194f07a63effa1d71590d6" target="id-8c61e4a41145412d988546db7c74a52c"/>
+    <element xsi:type="archimate:ServingRelationship" id="id-cb6b3910e3194e46918527b7fb3ba3cf" source="id-db6046e7eb674469b4d214b619ef6fde" target="id-8d36a5b5a1754a9ba8030dcdcb111624"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-f474395a2cee40539787e7b22c0275f4" source="id-db6046e7eb674469b4d214b619ef6fde" target="id-8d36a5b5a1754a9ba8030dcdcb111624"/>
+    <element xsi:type="archimate:AccessRelationship" id="id-acc27e3d58354db2b6c636b7125b5037" source="id-8c61e4a41145412d988546db7c74a52c" target="id-d8bebed44a774f228fa28cba6f390095" accessType="3"/>
+    <element xsi:type="archimate:ServingRelationship" id="id-d8c58c9a9da64e628c77aadfe955f096" source="id-1916066fb45541e4b2eb4ccd3cfa9eaf" target="id-a163cfd1899c4616a54fde1fcca8b27d"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-8e7e7ee54a4148d096a961a83f4d2284" source="id-6e68855fbd0d42c49e0c7e381e0d1ac0" target="id-8d36a5b5a1754a9ba8030dcdcb111624"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-60ba7b796e064717a71e8407dbfa7060" source="id-83ef7ed10a0146abb2737b7606d65734" target="id-f9dabba9589b49019a5258e9ffd56358"/>
+    <element xsi:type="archimate:AccessRelationship" id="id-fef5f379341d43d1b8008222c3785803" source="id-83ef7ed10a0146abb2737b7606d65734" target="id-3d91ac63e089427f9b042f7d5b8fffd3"/>
+    <element xsi:type="archimate:AccessRelationship" id="id-c41d900bea694c5792ea7c86598f1352" source="id-5e338a5b48b444a0b150c3127847f2bf" target="id-e4158d3cc3314c0bb7e6a00c3d86d27a" accessType="1"/>
+    <element xsi:type="archimate:AccessRelationship" id="id-c8bace19a6ed42fb822c8de110c09120" source="id-5e338a5b48b444a0b150c3127847f2bf" target="id-f4397ef6bd79438abf4137af1b2206d4"/>
+    <element xsi:type="archimate:AccessRelationship" id="id-eeb1fe82c9b34625ac95dddc2a611bde" source="id-825b7583bbab4742b7af273e2325dd60" target="id-e4158d3cc3314c0bb7e6a00c3d86d27a"/>
+    <element xsi:type="archimate:TriggeringRelationship" id="id-c635f207f34240df8f7fb0d18e2aa3e6" source="id-f95d7d02658442fd99c1bbbab85388da" target="id-a722837f85ea4c35a0e7aaa8e77579be"/>
+    <element xsi:type="archimate:TriggeringRelationship" id="id-69d7c5896ffd4a8c9df0ec373b492e9d" source="id-a722837f85ea4c35a0e7aaa8e77579be" target="id-a163cfd1899c4616a54fde1fcca8b27d"/>
+    <element xsi:type="archimate:AccessRelationship" id="id-23e7055d2fa14d8ea82d03bd517ff0dd" source="id-0980aad087544406a4562b8d360dd1cf" target="id-3d91ac63e089427f9b042f7d5b8fffd3"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-8dd53f2a0b0a442cb4da96df7f81f63a" source="id-8c61e4a41145412d988546db7c74a52c" target="id-7f441c3df67648fbb73267a8b76552ca"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-9b317816d76c4022a45a36b30411f24e" source="id-e1cd6a1dea8f43228e42b73c0e95e219" target="id-8d36a5b5a1754a9ba8030dcdcb111624"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-1a24224e1f814368b40ae36b77cd53d2" source="id-a163cfd1899c4616a54fde1fcca8b27d" target="id-d37e581a679d449d84f0ea0771fd3570"/>
+    <element xsi:type="archimate:TriggeringRelationship" id="id-703402917eef4a9cb633450d267e12a4" source="id-a722837f85ea4c35a0e7aaa8e77579be" target="id-d37e581a679d449d84f0ea0771fd3570"/>
+    <element xsi:type="archimate:ServingRelationship" id="id-e1c73cf8be414c399f82357660aba77c" source="id-a722837f85ea4c35a0e7aaa8e77579be" target="id-d37e581a679d449d84f0ea0771fd3570"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-44d28526a2ac48ce83fe05fd36b994f5" source="id-1916066fb45541e4b2eb4ccd3cfa9eaf" target="id-d37e581a679d449d84f0ea0771fd3570"/>
+    <element xsi:type="archimate:AccessRelationship" id="id-d7811238b286499a8127e56b9ae484cd" source="id-858d835e73b4498eb7c5895687a442d2" target="id-f4397ef6bd79438abf4137af1b2206d4">
+      <documentation>Dublin mentioned the option to add your own attribute values, just because the source data is not good enough to deliver correct roof current situations. 
+So, one should be able </documentation>
+    </element>
+    <element xsi:type="archimate:AccessRelationship" id="id-e07054c5d807433fa4c580b7c02dad47" source="id-858d835e73b4498eb7c5895687a442d2" target="id-70293672d2e34408a1ea62ff7043c1cc" accessType="3"/>
+    <element xsi:type="archimate:AccessRelationship" id="id-2177b3ca22554befbab511bc704a67e4" source="id-858d835e73b4498eb7c5895687a442d2" target="id-f4397ef6bd79438abf4137af1b2206d4"/>
+    <element xsi:type="archimate:TriggeringRelationship" id="id-62d3cfe6e3454219bfae5136fceade3b" source="id-935fd031f9194f07a63effa1d71590d6" target="id-8c61e4a41145412d988546db7c74a52c"/>
+    <element xsi:type="archimate:AccessRelationship" id="id-93985dc5841f4490aaa1b7f752474b67" source="id-0627d0507fc64a7b8404991b3a75db9b" target="id-f4397ef6bd79438abf4137af1b2206d4" accessType="3"/>
+    <element xsi:type="archimate:AccessRelationship" id="id-09e535fea1c94f85a88c4a4a8915024d" source="id-331f2ff8543d43c18664e30cfca43b55" target="id-f4397ef6bd79438abf4137af1b2206d4" accessType="1"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-61e3386a84184265a4d7fb71109020e3" source="id-eeaab8e87f654ec197b11d6147777837" target="id-8d36a5b5a1754a9ba8030dcdcb111624"/>
+  </folder>
+  <folder name="Views" id="id-c0809124e2df4030bf62a56dc4ae63f5" type="diagrams">
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Global Architecture Multiroofs 06-02-2026" id="id-514a4ff883754dcb938c567f99be7ce0">
+      <child xsi:type="archimate:DiagramObject" id="id-5be3c1a662144da0827b2901f6fe6e00" targetConnections="id-7c93b0878c4a476f8d3169bf9a34c367 id-f70acba7cd3f41629e2668aa81d4c1d1 id-39e2bbd920cc40e680f1282e470f2c2b id-65912121b9f945dcb2d6a4f481fdb246" archimateElement="id-f9dabba9589b49019a5258e9ffd56358">
+        <bounds x="755" y="528" width="733" height="37"/>
+        <feature name="lineStyle" value="2"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-87f2119ae6354f8887f33097fe614155" source="id-5be3c1a662144da0827b2901f6fe6e00" target="id-3b8ca241f47841b886b346bc6938c538" archimateRelationship="id-68771ea1df9e437c84267ee1ec13741d"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-395145ae5d614b318a11de4c1da3cb0f" archimateElement="id-a69665c4906c415aa4bda8f03f57612d">
+        <bounds x="777" y="613" width="153" height="60"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-7c93b0878c4a476f8d3169bf9a34c367" source="id-395145ae5d614b318a11de4c1da3cb0f" target="id-5be3c1a662144da0827b2901f6fe6e00" archimateRelationship="id-ae91491655a04b38a9062942e17a7811"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-6486ef5bda3f4e84858becfddb848b57" archimateElement="id-67aac19b8599447e84ec774fee4e93a4">
+        <bounds x="1159" y="613" width="109" height="60"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-f70acba7cd3f41629e2668aa81d4c1d1" source="id-6486ef5bda3f4e84858becfddb848b57" target="id-5be3c1a662144da0827b2901f6fe6e00" archimateRelationship="id-95cf4d656523422ebfe8d6a33cf812df"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-fdc9089c6e164222a188b5b3f625d7a3" targetConnections="id-3de87f79b9384b5b909a5999165796c0 id-d54488aebda042deb4e12aff1f5faed8 id-bfd5fcaa5e4b47a78ba723e6c3c9f9a9 id-1240ac8c15664ebb8e253b660fcf908b" archimateElement="id-f4397ef6bd79438abf4137af1b2206d4" type="1">
+        <bounds x="372" y="840" width="181" height="60"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-7fc6922dfa45462ba1f83adfeec15e63" archimateElement="id-cdfe1b18223844c89926bb15f47ace56" type="1">
+        <bounds x="765" y="708" width="553" height="97"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-3355315afa574cd4b234a86a7d1c1e74" source="id-7fc6922dfa45462ba1f83adfeec15e63" target="id-71e8420d761d4746b609f2cf946deb3a" archimateRelationship="id-6957937d0613435b9b4579d22dd5f35b"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-b661dcfbe38443a5ab59eeefd696c663" source="id-7fc6922dfa45462ba1f83adfeec15e63" target="id-f0a920f9751c42e7b76323e4cce95b4c" archimateRelationship="id-f3873df757b849cb81b73b6a230d6f64"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-ecd5e377f9b24068a73fa6d3538ff1ed" source="id-7fc6922dfa45462ba1f83adfeec15e63" target="id-85fa243a6b7d4ac78fbe5186684fe4c5" archimateRelationship="id-8616784a66a947e5839e570b70bbaa2f"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-51088d30ada54fcb94580a36dd9f1be1" source="id-7fc6922dfa45462ba1f83adfeec15e63" target="id-460bbfdac6414eaca70dc935cf5b73ff" archimateRelationship="id-ba8d6e60a4ca4fa2b536a31e01369b0a"/>
+        <child xsi:type="archimate:DiagramObject" id="id-f0a920f9751c42e7b76323e4cce95b4c" targetConnections="id-b661dcfbe38443a5ab59eeefd696c663" archimateElement="id-a387116121454f55adb75f387ee5b1d2" type="1">
+          <bounds x="240" y="24" width="107" height="60"/>
+          <sourceConnection xsi:type="archimate:Connection" id="id-ad8c31abfd8944359f50631184695a8c" source="id-f0a920f9751c42e7b76323e4cce95b4c" target="id-971227c3c4984cc58441402eebb58b6e" archimateRelationship="id-4130cda476804f578c5df5e2fb3c97da"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="id-85fa243a6b7d4ac78fbe5186684fe4c5" targetConnections="id-ecd5e377f9b24068a73fa6d3538ff1ed" archimateElement="id-ec7d1e85f87b4410ac1606d4df223b6d" type="1">
+          <bounds x="48" y="24" width="133" height="60"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="id-460bbfdac6414eaca70dc935cf5b73ff" targetConnections="id-51088d30ada54fcb94580a36dd9f1be1" archimateElement="id-870eefc232f54fe29607e5914092030d" type="1">
+          <bounds x="384" y="24" width="107" height="60"/>
+          <sourceConnection xsi:type="archimate:Connection" id="id-f0a98d037565479ca95e59938ec59a57" source="id-460bbfdac6414eaca70dc935cf5b73ff" target="id-201a03bfa5a94dd3a13ca51ead2ab1e0" archimateRelationship="id-00df5c908ce74a32b00c1acb9e8c9bcc"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:Note" id="id-cf0b1f225f0b4f27816c030908ccee41" font="1|arial|11.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|arial" fontColor="#000000" lineColor="#000000" textAlignment="1" fillColor="#ffffc8">
+        <bounds x="-36" width="553" height="61"/>
+        <content>Topic: Multiroofs Building Blocks (Business + Application)
+
+MultiRoofs is a browser-first, standards-based system that relies on precomputed, high-quality data and stable identifiers to enable fast, explainable decision support through a deliberately minimal MVP.
+
+
+Change history: (04-02-206)
+- Source: see properties (decision catalogue)
+- Authors: Max, Jaime, Ronald
+</content>
+        <property key="Bron" value="https://rotterdam.sharepoint.com/:x:/r/sites/Multiroofs/Gedeelde%20documenten/1%20Data%20(Acquisition%20and%20Architecture)/Documents/Decision%20Catalog%20v1.0%20-%20DRAFT.xlsx?d=wcdf02c0dbb694e81b97134b86c141bd3&amp;csf=1&amp;web=1&amp;e=jWQES1"/>
+      </child>
+      <child xsi:type="archimate:Note" id="id-6b47ac7699204673b3351f02ceeb44db" textAlignment="1">
+        <bounds x="-24" y="504" width="145" height="75"/>
+        <content>Application interface 
+(how user connects to application that support the business processes)</content>
+      </child>
+      <child xsi:type="archimate:Note" id="id-9d06ef36284a492e904413a6c95e3336" textAlignment="1">
+        <bounds x="-24" y="622" width="145" height="51"/>
+        <content>Application service (delivers value)</content>
+      </child>
+      <child xsi:type="archimate:Note" id="id-1e93f2f9ec2c4b11a665e27b3f6ce2d9" textAlignment="1">
+        <bounds x="-24" y="720" width="145" height="64"/>
+        <content>Application component
+(application service is realized by)
+</content>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-e56aa5c750fa40458d924791c24fd63d" archimateElement="id-4188cf0e07f34246a2cfac0e29a3e1b0">
+        <bounds x="960" y="392" width="130" height="60"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-ee125e70ec5d453d8b914cbea6119ddf" source="id-e56aa5c750fa40458d924791c24fd63d" target="id-3b8ca241f47841b886b346bc6938c538" archimateRelationship="id-d52f222da6a14a4ea02e8763a10f9fe7"/>
+      </child>
+      <child xsi:type="archimate:Note" id="id-23c6d0babda94b429fdaa29bcbb5e5ea" textAlignment="1">
+        <bounds x="-24" y="836" width="145" height="67"/>
+        <content>Data component
+(data used in a application component (read/write)</content>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-8f2545cc59134310adf6a9ac3e3896db" archimateElement="id-1aaa9b3356ab487f87b92242d200360a">
+        <bounds x="1311" y="392" width="130" height="60"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-9aa5dbff29534847a23da3158562c55d" source="id-8f2545cc59134310adf6a9ac3e3896db" target="id-3b8ca241f47841b886b346bc6938c538" archimateRelationship="id-b346274eb1e0431782fb27a4b0563b89"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-3b8ca241f47841b886b346bc6938c538" targetConnections="id-ee125e70ec5d453d8b914cbea6119ddf id-87f2119ae6354f8887f33097fe614155 id-9aa5dbff29534847a23da3158562c55d id-18c75ed6ac8d489fb7eadd266d641eb4 id-1c3532e14f614ec68ef4a2858c539930 id-f77bc38d08bc4d8abeffc5a041b08e54 id-4943c6efa23e4347a1e9c4f70e7447fd id-8c1a9bbdb4084ba9a40459bc8fc383a5" archimateElement="id-8d36a5b5a1754a9ba8030dcdcb111624">
+        <bounds x="743" y="285" width="733" height="49"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-8d716326b628471d86f6bb843cc0dab5" targetConnections="id-cd74a86d9018408a9b36fb55b2c92622" archimateElement="id-0a9d4422b1864c139cde31c460bffd04" type="1">
+        <bounds x="138" y="840" width="73" height="60"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-a2fa4205edd94d748f5b981732e33268" archimateElement="id-f95d7d02658442fd99c1bbbab85388da">
+        <bounds x="144" y="613" width="421" height="60"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-ddc30afbdc324df7aecc5593d0b794d6" source="id-a2fa4205edd94d748f5b981732e33268" target="id-6b267f39c8f246c593d99ee3702b3dc0" archimateRelationship="id-c635f207f34240df8f7fb0d18e2aa3e6"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-39122d381d794b29ad8ff925d80139f3" archimateElement="id-825b7583bbab4742b7af273e2325dd60" type="1">
+        <bounds x="138" y="729" width="96" height="56"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-cd74a86d9018408a9b36fb55b2c92622" source="id-39122d381d794b29ad8ff925d80139f3" target="id-8d716326b628471d86f6bb843cc0dab5" archimateRelationship="id-6945848e09464101b22a5a9bf6984128"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-e393459b998c4b1a83f67a47b1293dd6" source="id-39122d381d794b29ad8ff925d80139f3" target="id-0465bc13d6f14ec0965702b4d343b30a" archimateRelationship="id-eeb1fe82c9b34625ac95dddc2a611bde"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-2d563535416845c1a2e7dcd35efe69fd" targetConnections="id-acb3ebd871f1448b9f8c901957a6697d" archimateElement="id-7f441c3df67648fbb73267a8b76552ca">
+        <bounds x="1329" y="614" width="157" height="58"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-65912121b9f945dcb2d6a4f481fdb246" source="id-2d563535416845c1a2e7dcd35efe69fd" target="id-5be3c1a662144da0827b2901f6fe6e00" archimateRelationship="id-36f7094bea5e404db49b5a2d02d31cc7"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-f986c10785e447239ae1a2ddf07ad960" archimateElement="id-869d31c9a8734de98e75e783e3dd7322">
+        <bounds x="993" y="613" width="131" height="60"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-39e2bbd920cc40e680f1282e470f2c2b" source="id-f986c10785e447239ae1a2ddf07ad960" target="id-5be3c1a662144da0827b2901f6fe6e00" archimateRelationship="id-5828a3087fcc4222b3ba8785f8dd6a62"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-6b3e847f296949829f2fc7bf2704386b" archimateElement="id-8c61e4a41145412d988546db7c74a52c" type="1">
+        <bounds x="1341" y="724" width="134" height="65"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-b27a2eb11fc1417a9195f4f052a3bafb" source="id-6b3e847f296949829f2fc7bf2704386b" target="id-218a267a4dcf416baf533f9730e40cdb" archimateRelationship="id-acc27e3d58354db2b6c636b7125b5037"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-acb3ebd871f1448b9f8c901957a6697d" source="id-6b3e847f296949829f2fc7bf2704386b" target="id-2d563535416845c1a2e7dcd35efe69fd" archimateRelationship="id-8dd53f2a0b0a442cb4da96df7f81f63a"/>
+      </child>
+      <child xsi:type="archimate:Note" id="id-5bfe7986b8994b2b912e1c6310ada9a1" textAlignment="1">
+        <bounds x="-24" y="284" width="145" height="51"/>
+        <content>Business Service (adds value)</content>
+      </child>
+      <child xsi:type="archimate:Note" id="id-7811ac38b5564d72bb5949401879fdd6" textAlignment="1">
+        <bounds x="-24" y="392" width="145" height="51"/>
+        <content>Business Processes that realize the business service</content>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-971227c3c4984cc58441402eebb58b6e" targetConnections="id-ad8c31abfd8944359f50631184695a8c" archimateElement="id-bf889db792c74dd2b0e8bfcd472b2232" type="1">
+        <bounds x="1015" y="835" width="90" height="60"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-218a267a4dcf416baf533f9730e40cdb" targetConnections="id-b27a2eb11fc1417a9195f4f052a3bafb" archimateElement="id-d8bebed44a774f228fa28cba6f390095" type="1">
+        <bounds x="1358" y="835" width="100" height="60"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-201a03bfa5a94dd3a13ca51ead2ab1e0" targetConnections="id-f0a98d037565479ca95e59938ec59a57" archimateElement="id-09d196df585645b2bd6fba29c9d421b6" type="1">
+        <bounds x="1159" y="835" width="90" height="60"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-230b65ba2e6744f3aeb1a891aaab139b" archimateElement="id-6e68855fbd0d42c49e0c7e381e0d1ac0" type="1">
+        <bounds x="960" y="168" width="130" height="60"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-1c3532e14f614ec68ef4a2858c539930" source="id-230b65ba2e6744f3aeb1a891aaab139b" target="id-3b8ca241f47841b886b346bc6938c538" archimateRelationship="id-8e7e7ee54a4148d096a961a83f4d2284"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-994eda5fe508444191fa8656ad4b35e4" archimateElement="id-3b39eb1e83ab47c7a1bb59b11d28f50b" type="1">
+        <bounds x="1239" y="168" width="130" height="60"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-0a67d8c3b9054dc38808c7fd842b3059" archimateElement="id-12bd2801cb1047ad9000ab0c8e533abf" type="1">
+        <bounds x="1104" y="168" width="130" height="60"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-11f153b0dd264cb9a14349028202f4f0" archimateElement="id-db6046e7eb674469b4d214b619ef6fde">
+        <bounds x="1139" y="392" width="130" height="60"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-18c75ed6ac8d489fb7eadd266d641eb4" source="id-11f153b0dd264cb9a14349028202f4f0" target="id-3b8ca241f47841b886b346bc6938c538" archimateRelationship="id-f474395a2cee40539787e7b22c0275f4"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-7571117984d3438d9d00e2bd7d90de93" archimateElement="id-a163cfd1899c4616a54fde1fcca8b27d">
+        <bounds x="241" y="394" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-0349af4263d1423c9ec8204d7552e1cd" source="id-7571117984d3438d9d00e2bd7d90de93" target="id-756f72699bb94ab892170d4835fa0649" archimateRelationship="id-1a24224e1f814368b40ae36b77cd53d2"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-103de867ad2c4e2f83199214e4c9f4b3" archimateElement="id-1916066fb45541e4b2eb4ccd3cfa9eaf" type="1">
+        <bounds x="360" y="180" width="130" height="60"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-a5ef366ebd6c45c693547e07de3de5d1" source="id-103de867ad2c4e2f83199214e4c9f4b3" target="id-756f72699bb94ab892170d4835fa0649" archimateRelationship="id-44d28526a2ac48ce83fe05fd36b994f5"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-0465bc13d6f14ec0965702b4d343b30a" targetConnections="id-e9e97ece18db4214aa2b76c653d17825 id-e393459b998c4b1a83f67a47b1293dd6" archimateElement="id-e4158d3cc3314c0bb7e6a00c3d86d27a" type="1">
+        <bounds x="233" y="840" width="122" height="60"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-cc34dfc7562647c7844fc36e34465376" archimateElement="id-5e338a5b48b444a0b150c3127847f2bf" type="1">
+        <bounds x="241" y="729" width="91" height="56"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-e9e97ece18db4214aa2b76c653d17825" source="id-cc34dfc7562647c7844fc36e34465376" target="id-0465bc13d6f14ec0965702b4d343b30a" archimateRelationship="id-c41d900bea694c5792ea7c86598f1352"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-3de87f79b9384b5b909a5999165796c0" source="id-cc34dfc7562647c7844fc36e34465376" target="id-fdc9089c6e164222a188b5b3f625d7a3" archimateRelationship="id-c8bace19a6ed42fb822c8de110c09120"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-8643acefd1054b5f8f2fa66dae94ebab" archimateElement="id-331f2ff8543d43c18664e30cfca43b55" type="1">
+        <bounds x="629" y="729" width="109" height="56"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-b6a27057399d45648871b3d1cbc65e8b" source="id-8643acefd1054b5f8f2fa66dae94ebab" target="id-71e8420d761d4746b609f2cf946deb3a" archimateRelationship="id-26e899e436c5494495676b83c5b52bd8"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-1240ac8c15664ebb8e253b660fcf908b" source="id-8643acefd1054b5f8f2fa66dae94ebab" target="id-fdc9089c6e164222a188b5b3f625d7a3" archimateRelationship="id-09e535fea1c94f85a88c4a4a8915024d"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-71e8420d761d4746b609f2cf946deb3a" targetConnections="id-b6a27057399d45648871b3d1cbc65e8b id-3355315afa574cd4b234a86a7d1c1e74" archimateElement="id-dd6bf5c0f154400997b7c94d2febfdda" type="1">
+        <bounds x="653" y="840" width="157" height="60"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-6b267f39c8f246c593d99ee3702b3dc0" targetConnections="id-ddc30afbdc324df7aecc5593d0b794d6" archimateElement="id-a722837f85ea4c35a0e7aaa8e77579be">
+        <bounds x="144" y="528" width="493" height="37"/>
+        <feature name="lineStyle" value="2"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-ec191f10d7794377972b50b152c45692" source="id-6b267f39c8f246c593d99ee3702b3dc0" target="id-756f72699bb94ab892170d4835fa0649" archimateRelationship="id-e1c73cf8be414c399f82357660aba77c"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-756f72699bb94ab892170d4835fa0649" targetConnections="id-0349af4263d1423c9ec8204d7552e1cd id-ec191f10d7794377972b50b152c45692 id-a5ef366ebd6c45c693547e07de3de5d1 id-5bae310e3ee34d9591344cc35fb96b93" archimateElement="id-d37e581a679d449d84f0ea0771fd3570">
+        <bounds x="156" y="282" width="505" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-a7cb271ffbbe42bd9a5871eced11d353" archimateElement="id-eeaab8e87f654ec197b11d6147777837">
+        <bounds x="816" y="394" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-8c1a9bbdb4084ba9a40459bc8fc383a5" source="id-a7cb271ffbbe42bd9a5871eced11d353" target="id-3b8ca241f47841b886b346bc6938c538" archimateRelationship="id-61e3386a84184265a4d7fb71109020e3"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-3213dee433ad410c96dc6c96631aa065" archimateElement="id-e1cd6a1dea8f43228e42b73c0e95e219">
+        <bounds x="672" y="392" width="120" height="60"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-f77bc38d08bc4d8abeffc5a041b08e54" source="id-3213dee433ad410c96dc6c96631aa065" target="id-3b8ca241f47841b886b346bc6938c538" archimateRelationship="id-9b317816d76c4022a45a36b30411f24e"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-9c13fb45a9cd428885bc94cb57da1913" archimateElement="id-fc6d28b109b74b288fa0ff5cda4d0cad">
+        <bounds x="480" y="394" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-4943c6efa23e4347a1e9c4f70e7447fd" source="id-9c13fb45a9cd428885bc94cb57da1913" target="id-3b8ca241f47841b886b346bc6938c538" archimateRelationship="id-cb86f48c4c5743e19a50b1149d954af9"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-5bae310e3ee34d9591344cc35fb96b93" source="id-9c13fb45a9cd428885bc94cb57da1913" target="id-756f72699bb94ab892170d4835fa0649" archimateRelationship="id-4f21848486234964849a60db4d196b75"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-90a67158edad423b94f61378978e02e2" archimateElement="id-858d835e73b4498eb7c5895687a442d2" type="1">
+        <bounds x="343" y="729" width="95" height="56"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-d54488aebda042deb4e12aff1f5faed8" source="id-90a67158edad423b94f61378978e02e2" target="id-fdc9089c6e164222a188b5b3f625d7a3" archimateRelationship="id-2177b3ca22554befbab511bc704a67e4"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-2b4d7b8f3e8e48d1bda995c8e1e5b1e5" archimateElement="id-4540606e7cf64e9c9853c31293f194b0">
+        <bounds x="331" y="94" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-123b169a94504da881b1dab8ba21691f" archimateElement="id-0922a95cd3d74d728dd79b25c0a61574">
+        <bounds x="168" y="94" width="145" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-7e563f8d8c5444c9802dc472b34ca5a3" archimateElement="id-397378a5d6ba423c9d8dd6afe3aab135">
+        <bounds x="660" y="94" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-f77f5ec978c449f0ba09c830c36f5033" archimateElement="id-85da2163d3cb4365a76fd59ac1f341b6">
+        <bounds x="800" y="94" width="136" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-8070b979ef1248c38328cb4041927d55" archimateElement="id-11366d44cf12415f9ad7344550ad1974">
+        <bounds x="968" y="94" width="148" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-6042263546ea47a1956aa974447b1e8e" archimateElement="id-0b968375ef50499983fcbf1dc6c20798">
+        <bounds x="480" y="94" width="160" height="55"/>
+      </child>
+      <child xsi:type="archimate:Note" id="id-a980930345f44a539332e503393ea6a4" textAlignment="1">
+        <bounds x="-36" y="96" width="169" height="61"/>
+        <content>Guiding principles for design and solution engineering</content>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-9364af3dda794b99937de8ad0d35f0cc" archimateElement="id-0627d0507fc64a7b8404991b3a75db9b" type="1">
+        <bounds x="450" y="729" width="109" height="56"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-bfd5fcaa5e4b47a78ba723e6c3c9f9a9" source="id-9364af3dda794b99937de8ad0d35f0cc" target="id-fdc9089c6e164222a188b5b3f625d7a3" archimateRelationship="id-93985dc5841f4490aaa1b7f752474b67"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-4a140da5c55e42f6848eb4d07c685d66" archimateElement="id-ae19e6f9e46d4d8c906a89bb1c32b011">
+        <bounds x="1159" y="96" width="186" height="52"/>
+      </child>
+      <property key="Author" value="Ronald"/>
+      <property key="Source" value="Decision Catalogue 1.0 Draft"/>
+    </element>
+  </folder>
+</archimate:model>
